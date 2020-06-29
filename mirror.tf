@@ -29,11 +29,11 @@ EOF
 
 locals {
   import_triggers = {
-    once   = "once"
-    weekly = tonumber(formatdate("", timestamp())) / 4
-    daily  = formatdate("DD", timestamp())
-    hourly = formatdate("hhZ", timestamp())
-    always = timestamp()
+    once    = "once"
+    monthly = formatdate("MM", timestamp())
+    daily   = formatdate("DD", timestamp())
+    hourly  = formatdate("hhZ", timestamp())
+    always  = timestamp()
   }
 
   // ensure trailing slash where source registry is specified..
