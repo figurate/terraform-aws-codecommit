@@ -18,7 +18,7 @@ resource "null_resource" "codecommit_push" {
   }
   provisioner "local-exec" {
     command = <<EOF
-cd ${split("/", var.source_repository)[-1]} && \
+cd ${element(split("/", var.source_repository), -1)} && \
   (git remote add codecommit ${aws_codecommit_repository.repository.clone_url_http} || true) && \
   git push codecommit --mirror
 EOF
