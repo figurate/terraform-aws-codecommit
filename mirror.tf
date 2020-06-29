@@ -7,7 +7,7 @@ resource "null_resource" "source_clone" {
     import = local.import_triggers[var.mirror_frequency]
   }
   provisioner "local-exec" {
-    command = "git clone --mirror ${var.source_repository}"
+    command = "git clone --mirror ${var.source_repository} || true"
   }
 }
 
