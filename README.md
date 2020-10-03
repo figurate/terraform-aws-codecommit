@@ -1,5 +1,7 @@
 # ![AWS](aws-logo.png) CodeCommit Repository
 
+![AWS CodeCommit Repository](aws\_codecommit\_repository.png)
+
 Purpose: Defaults for CodeCommit repositories.
 
 ## Requirements
